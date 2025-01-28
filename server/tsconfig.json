@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2021", // Указывает версию JavaScript, в которую TypeScript будет транслироваться.
+    "module": "CommonJS", // Используется CommonJS, который нужен для Node.js.
+    "strict": true, // Включает строгий режим TypeScript.
+    "esModuleInterop": true, // Разрешает использовать импорты из CommonJS модулей.
+    "forceConsistentCasingInFileNames": true, // Предотвращает ошибки с регистром имен файлов.
+    "skipLibCheck": true, // Пропускает проверку типов внутри модулей node_modules.
+    "moduleResolution": "node", // Разрешение модулей, как в Node.js.
+    "outDir": "./dist", // Папка, в которую будет компилироваться JavaScript-код.
+    "rootDir": "./", // Указывает корневую папку для исходного TypeScript-кода.
+    "resolveJsonModule": true, // Разрешает импорт JSON-файлов.
+    "typeRoots": [
+      "./node_modules/@types"
+    ], // Указывает, где искать определения типов.
+    "allowJs": true, // Позволяет компилировать JavaScript-файлы, если такие есть.
+    "noImplicitAny": true, // Запрещает использование неявного типа `any`.
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "src/**/*.ts" // Указывает файлы, которые должны быть скомпилированы.
+  ],
+  "exclude": [
+    "node_modules", // Исключает папку node_modules из компиляции.
+    "dist" // Исключает выходную папку.
+  ]
+}
